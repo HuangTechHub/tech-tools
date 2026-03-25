@@ -312,6 +312,11 @@ tools:
   ipv6-ula-generator:
     title: IPv6 ULA generator
     description: Generate your own local, non-routable IP addresses for your network according to RFC4193.
+ 
+   dns-records-lookup:
+    title: DNS records lookup
+    description: Query the DNS records for a given domain name and record type (A, MX, TXT, ...)
+
 
   hash-text:
     title: Hash text

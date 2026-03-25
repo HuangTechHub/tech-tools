@@ -14,7 +14,7 @@ const validation = useValidation({
   source: domain,
   rules: [
     {
-      validator: value => value.trim().length > 0 && /^[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$/.test(value.trim()),
+      validator: value => value.trim().length > 0 && /^[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(value.trim()),
       message: 'Invalid domain name',
     },
   ],
