@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## Version 2026.03.25-891a4e8
+
+### Features
+-  Implement an automated release pipeline for versioning, changelog generation, and publishing artifacts. (85a270c)
+
+### Merge branch 'main' of https
+-  //github.com/HuangTechHub/tech-tools (891a4e8)
+
 ## Version 2026.03.25-103dd97
 
 ### Features
