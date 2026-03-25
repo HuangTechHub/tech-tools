@@ -13,11 +13,11 @@ test.describe('Tool - Text to ASCII binary', () => {
     await page.getByTestId('text-to-binary-input').fill('tech-tools');
     const binary = await page.getByTestId('text-to-binary-output').inputValue();
 
-    expect(binary).toEqual('01101001 01110100 00101101 01110100 01101111 01101111 01101100 01110011');
+    expect(binary).toEqual('01110100 01100101 01100011 01101000 00101101 01110100 01101111 01101111 01101100 01110011');
   });
 
   test('Binary to text conversion', async ({ page }) => {
-    await page.getByTestId('binary-to-text-input').fill('01101001 01110100 00101101 01110100 01101111 01101111 01101100 01110011');
+    await page.getByTestId('binary-to-text-input').fill('01110100 01100101 01100011 01101000 00101101 01110100 01101111 01101111 01101100 01110011');
     const text = await page.getByTestId('binary-to-text-output').inputValue();
 
     expect(text).toEqual('tech-tools');
