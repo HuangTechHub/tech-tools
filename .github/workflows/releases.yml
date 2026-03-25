@@ -42,10 +42,10 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           tags: |
-            corentinth/tech-tools:latest
-            corentinth/tech-tools:${{ env.RELEASE_VERSION }}
-            ghcr.io/corentinth/tech-tools:latest
-            ghcr.io/corentinth/tech-tools:${{ env.RELEASE_VERSION}}
+            huangtechhub/tech-tools:latest
+            huangtechhub/tech-tools:${{ env.RELEASE_VERSION }}
+            ghcr.io/huangtechhub/tech-tools:latest
+            ghcr.io/huangtechhub/tech-tools:${{ env.RELEASE_VERSION}}
 
   github-release:
     runs-on: ubuntu-latest
@@ -93,11 +93,11 @@ jobs:
             ## Docker images
 
             - Docker Hub
-              - `corentinth/tech-tools:latest`
-              - `corentinth/tech-tools:${{ env.RELEASE_VERSION }}`
+              - `huangtechhub/tech-tools:latest`
+              - `huangtechhub/tech-tools:${{ env.RELEASE_VERSION }}`
             - GitHub Container Registry
-              - `ghcr.io/corentinth/tech-tools:latest`
-              - `ghcr.io/corentinth/tech-tools:${{ env.RELEASE_VERSION}}`
+              - `ghcr.io/huangtechhub/tech-tools:latest`
+              - `ghcr.io/huangtechhub/tech-tools:${{ env.RELEASE_VERSION}}`
 
             ## Changelog
 
