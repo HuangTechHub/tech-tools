@@ -1,7 +1,7 @@
 {
   "name": "tech-tools",
   "type": "module",
-  "version": "2026.3.25-891a4e8",
+  "version": "2026.3.25-970ba4b",
   "packageManager": "pnpm@9.11.0",
   "description": "Collection of handy online tools for developers, with great UX. ",
   "author": "Corentin Th <corentin.thomasset74+tech-tools@gmail.com> (https://corentin.tech)",
