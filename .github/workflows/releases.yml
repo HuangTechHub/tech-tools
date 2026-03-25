@@ -3,6 +3,8 @@ name: Release new versions
 on:
   workflow_dispatch:
   push:
+    branches:
+      - main
     tags:
       - 'v*.*.*'
 
@@ -22,26 +24,26 @@ jobs:
           fetch-depth: 0
 
       - name: Setup Node
-        if: github.event_name == 'workflow_dispatch'
+        if: github.event_name == 'workflow_dispatch' || (github.event_name == 'push' && github.ref == 'refs/heads/main')
         uses: actions/setup-node@v3
         with:
           node-version: 20
 
       - run: corepack enable
-        if: github.event_name == 'workflow_dispatch'
+        if: github.event_name == 'workflow_dispatch' || (github.event_name == 'push' && github.ref == 'refs/heads/main')
 
       - name: Install dependencies
-        if: github.event_name == 'workflow_dispatch'
+        if: github.event_name == 'workflow_dispatch' || (github.event_name == 'push' && github.ref == 'refs/heads/main')
         run: pnpm i
 
       - name: Configure Git
-        if: github.event_name == 'workflow_dispatch'
+        if: github.event_name == 'workflow_dispatch' || (github.event_name == 'push' && github.ref == 'refs/heads/main')
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
       - name: Create Release Commit & Tag
-        if: github.event_name == 'workflow_dispatch'
+        if: github.event_name == 'workflow_dispatch' || (github.event_name == 'push' && github.ref == 'refs/heads/main')
         run: |
           git checkout ${{ github.ref_name }}
           node ./scripts/release.mjs --ci
@@ -50,7 +52,7 @@ jobs:
       - name: Get release version
         id: get-version
         run: |
-          if [ "${{ github.event_name }}" == "workflow_dispatch" ]; then
+          if [ "${{ github.event_name }}" == "workflow_dispatch" ] || [ "${{ github.event_name }}" == "push" -a "${{ github.ref }}" == "refs/heads/main" ]; then
             VERSION=$(git describe --tags --abbrev=0)
             echo "RELEASE_VERSION=${VERSION#v}" >> $GITHUB_OUTPUT
           else

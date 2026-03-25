@@ -20,6 +20,15 @@ try {
   rawCommits = (await $`git log --pretty=oneline ${lastTag}..HEAD`).stdout;
 } catch (error) {
   rawCommits = (await $`git log --pretty=oneline HEAD`).stdout;
+  const commitsToRelease = rawCommits.split('\n').filter((c) => {
+    const line = c.trim().toLowerCase();
+    return line && !line.includes('docs(changelog)') && !line.includes('chore(version)');
+  });
+
+  if (commitsToRelease.length === 0) {
+    consola.info('No new feature or bugfix commits since last release. Aborting.');
+    process.exit(0);
+  }
 }
 
 const markdown = rawCommitsToMarkdown({ rawCommits });
