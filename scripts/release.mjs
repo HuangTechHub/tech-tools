@@ -6,6 +6,7 @@ import { addToChangelog } from './shared/changelog.mjs';
 $.verbose = false;
 
 const isDryRun = argv['dry-run'] ?? false;
+const isCi = argv['ci'] ?? false;
 
 const now = new Date();
 const currentShortSha = (await $`git rev-parse --short HEAD`).stdout.trim();
@@ -25,12 +26,15 @@ if (isDryRun) {
   process.exit(0);
 }
 
-const shouldContinue = await consola.prompt(
-  'This script will create a new version and tag, and update the changelog. Continue?',
-  {
-    type: 'confirm',
-  },
-);
+let shouldContinue = true;
+if (!isCi) {
+  shouldContinue = await consola.prompt(
+    'This script will create a new version and tag, and update the changelog. Continue?',
+    {
+      type: 'confirm',
+    },
+  );
+}
 
 if (!shouldContinue) {
   consola.info('Aborting');
