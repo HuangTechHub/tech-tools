@@ -58,6 +58,10 @@ toolCard:
 search:
   label: Search
 tools:
+  dns-records-lookup:
+    title: DNS records lookup
+    description: Query the DNS records for a given domain name and record type (A, MX, TXT, ...)
+
   categories:
     favorite-tools: 'Your favorite tools'
     crypto: Crypto
@@ -308,15 +312,10 @@ tools:
   og-meta-generator:
     title: Open graph meta generator
     description: Generate open-graph and socials HTML meta tags for your website.
-
+ 
   ipv6-ula-generator:
     title: IPv6 ULA generator
     description: Generate your own local, non-routable IP addresses for your network according to RFC4193.
- 
-   dns-records-lookup:
-    title: DNS records lookup
-    description: Query the DNS records for a given domain name and record type (A, MX, TXT, ...)
-
 
   hash-text:
     title: Hash text
