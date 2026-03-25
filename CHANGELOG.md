@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## Version 2026.03.25-103dd97
+
+### Features
+-  add DNS records lookup tool with Cloudflare DNS API integration (103dd97)
+-  Implement a DNS records lookup tool and update TypeScript configurations for improved type support. (5b289a4)
+-  add new tool for DNS records lookup (1bcc95c)
+-  Add initial English localization strings for the application UI and various tools. (79a4df5)
+-  Add DNS records lookup tool and associated localization. (e85a4c8)
+-  Add GitHub Actions workflow for automated releases, Docker image publishing, and changelog generation. (5a10ae8)
+
 ## Version 2026.03.25-4d4332b
 
 ### Features
