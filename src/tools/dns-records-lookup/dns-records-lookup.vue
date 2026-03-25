@@ -6,10 +6,10 @@ const domain = ref('google.com');
 const recordType = ref('A');
 const loading = ref(false);
 interface DnsResult {
-  name: string;
-  type: string;
-  TTL: number;
-  data: string;
+  name: string
+  type: string
+  TTL: number
+  data: string
 }
 
 const error = ref<string | null>(null);
