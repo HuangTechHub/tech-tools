@@ -133,7 +133,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           files: tech-tools-${{ env.RELEASE_VERSION }}.zip
           tag_name: v${{ env.RELEASE_VERSION }}
-          draft: true
+          draft: false
           prerelease: false
           body: |
             ## Docker images
