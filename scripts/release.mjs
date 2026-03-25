@@ -14,7 +14,13 @@ const currentShortSha = (await $`git rev-parse --short HEAD`).stdout.trim();
 const calver = now.toISOString().slice(0, 10).replace(/-/g, '.');
 const version = `${calver}-${currentShortSha}`;
 
-const { stdout: rawCommits } = await $`git log --pretty=oneline $(git describe --tags --abbrev=0)..HEAD`;
+let rawCommits = '';
+try {
+  const lastTag = (await $`git describe --tags --abbrev=0`).stdout.trim();
+  rawCommits = (await $`git log --pretty=oneline ${lastTag}..HEAD`).stdout;
+} catch (error) {
+  rawCommits = (await $`git log --pretty=oneline HEAD`).stdout;
+}
 
 const markdown = rawCommitsToMarkdown({ rawCommits });
 
