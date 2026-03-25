@@ -11,4 +11,3 @@ export const tool = defineTool({
   icon: ArrowsShuffle,
   createdAt: new Date('2026-03-25'),
 });
-
