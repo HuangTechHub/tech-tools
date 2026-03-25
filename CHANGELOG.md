@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## Version 2026.03.25-970ba4b
+
+### Features
+-  add GitHub Actions workflow for automated releases, Docker image builds, and GitHub release creation. (970ba4b)
+
 ## Version 2026.03.25-891a4e8
 
 ### Features
