@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## Version 2026.04.02-7d59c3a
+
+### Continuous integration
+-  add GitHub Actions workflows for nightly and versioned Docker and GitHub releases (7d59c3a)
+
 ## Version 2026.04.02-beb06c7
 
 ### Features
