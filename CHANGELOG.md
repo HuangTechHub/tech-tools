@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## Version 2026.04.02-13aa4de
+
+### Features
+-  add CI/CD workflows for releases, nightly docker builds, testing, and E2E validation (464cd24)
+
+### Merge branch 'main' of https
+-  //github.com/HuangTechHub/tech-tools (13aa4de)
+
 ## Version 2026.04.02-c0c83dc
 
 ### Chores
