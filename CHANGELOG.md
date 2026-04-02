@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## Version 2026.04.02-c0c83dc
+
+### Chores
+-  update pnpm lockfile dependencies (c0c83dc)
+-  upgrade to Node.js 24 and implement CI/CD workflows for testing, releases, and nightly builds (4cb79cb)
+
 ## Version 2026.03.25-970ba4b
 
 ### Features
