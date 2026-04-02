@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## Version 2026.04.02-beb06c7
+
+### Features
+-  add GitHub Actions workflow for automated Docker nightly releases (748d6f4)
+
+### Merge branch 'main' of https
+-  //github.com/HuangTechHub/tech-tools (beb06c7)
+
 ## Version 2026.04.02-a65bd7e
 
 ### Features
